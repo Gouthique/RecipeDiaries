@@ -1,0 +1,65 @@
+.recipe-creation-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    .rcc2 {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      
+      .recipe-c-form {
+        // Try using width instead of max-width
+        width: 100%; // You can adjust this percentage as needed
+        min-width: 1200px; // Ensures that the form doesn't get smaller than 650px
+        margin: auto;
+  
+        h2 {
+          color: #333;
+          margin-bottom: 20px;
+        }
+  
+        .rccform {
+          margin-bottom: 15px;
+          label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666;
+          }
+  
+          input,
+          textarea {
+            width: 100%; // Ensure inputs and textareas take full width of the form
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+  
+            &:focus {
+              border-color: #80bdff;
+              outline: 0;
+              box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+            }
+          }
+  
+          textarea {
+            height: 100px; // You can adjust this if you want a larger textarea
+            resize: vertical;
+          }
+        }
+  
+        .btn-success {
+          background-color: #5cb85c;
+          border-color: #4cae4c;
+          padding: 10px 15px;
+          font-size: 16px;
+          border-radius: 4px;
+          cursor: pointer;
+          &:hover {
+            background-color: #4cae4c;
+          }
+        }
+      }
+    }
+  }
+  

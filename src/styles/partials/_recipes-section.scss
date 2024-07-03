@@ -1,0 +1,148 @@
+// .recipes-container{
+//     display: grid;
+//     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+//     grid-gap: 1.5em;
+// }
+// .recipe-card{
+//     isolation: isolate;
+//     border-radius: 5px;
+//     overflow: hidden;
+//     box-shadow: 0 5px 15px var(--shadow-color);
+//     background-color: var(--background-color);
+//     .recipe-card-info{
+//         padding: 15px;
+//     }
+//     .custom-image{
+//         z-index: -1;
+//     }
+//     .auther-img{
+//         height: 60px;
+//         width: 60px;
+//         border-radius: 50%;
+//         border: 3px solid var(--background-light);
+//         box-shadow: 0 1px 3px var(--shadow-color);
+//         margin-top: -50px;
+//         z-index: 2;
+//     }
+//     .recipe-title{
+//         font-size: 1.25em;
+//         font-weight: bold;
+//         margin-bottom: .5em;
+//         color: var(--text-color);
+//         margin-top: .25em;
+//     }
+//     .recipe-desc{
+//         color: var(--text-light);
+//         font-size: .9em;
+//         letter-spacing: 1px
+//     }
+//     .view-btn{
+//         font-size: 1em;
+//         font-weight: bold;
+//         color: var(--primary-color);
+//         margin-top: .75em;
+//         display: inline-block;
+//     }
+// }
+
+.recipes-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-gap: 1.5em;
+    justify-items: center; /* Center the cards within the grid */
+  }
+  
+  .recipe-card {
+    display: flex; /* Use flex layout */
+    flex-direction: column; /* Stack items vertically */
+    width: 220px; /* Set a fixed width for all cards */
+    height: auto; /* Height adjusts based on content */
+    isolation: isolate;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px var(--shadow-color);
+    background-color: var(--background-color);
+  }
+  
+  .recipe-card-info {
+    padding: 15px;
+  }
+  
+  .custom-image {
+    width: 100%; /* Responsive to the width of the card */
+    height: 140px; /* Fixed height for all images */
+    object-fit: cover; /* Maintain aspect ratio without stretching */
+    z-index: -1;
+  }
+  
+  // .auther-img {
+  //   /* Adjust author image styles as necessary */
+  // }
+  
+  .recipe-title {
+    font-size: 1.25em;
+    font-weight: bold;
+    color: var(--primary-color);
+    /* Adjust margins as necessary */
+  }
+  
+  // .recipe-desc {
+  //   /* Adjust recipe description styles as necessary */
+  // }
+  .view-btn {
+    padding: 10px 20px;
+    background-color: #28a745; /* Green background */
+    border: none;
+    border-radius: 50px; /* Rounded edges */
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    display: block;
+    width: 100%; /* Make the button expand to the full width of its container */
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    margin-top: 10px; /* Space from the content above */
+}
+
+.view-btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+.search-box {
+    display: flex;
+    justify-content: center; /* Center the search box */
+    align-items: center;
+    margin: 1rem 0; /* Add some margin around the search box */
+
+    input[type="text"] {
+        width: 100%;
+        max-width: 400px; /* Increase the maximum width */
+        padding: 15px 20px; /* Increase padding for larger height */
+        font-size: 18px; /* Increase font size if desired */
+        border: 1px solid #ccc;
+        border-radius: 5px 0 0 5px;
+        margin-right: -1px;
+        
+        &:focus {
+            outline: none;
+            border-color: #5cb85c; /* Change the focus color if you like */
+            box-shadow: 0 0 0 0.2rem rgba(92, 184, 92, 0.25);
+        }
+    }
+
+    .btn {
+        padding: 15px 20px; /* Match the height of the input */
+        background-color: #5cb85c; /* Keep the existing color or change if desired */
+        color: white;
+        border: none;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+
+        &:hover {
+            background-color: darken(#5cb85c, 10%);
+        }
+    }
+}
+
+

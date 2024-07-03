@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+body {
+  background-color: #f7f7f7; /* Light grey background */
+  font-family: 'Open Sans', sans-serif;
+}
+
+.shopping-list-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff; /* White background for the form */
+  border-radius: 16px; /* Rounded corners for the form */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h1 {
+  color: #333; /* Dark grey color for the heading */
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Space between form elements */
+}
+
+input[type="text"] {
+  border: 2px solid #e2e2e2; /* Subtle border for input */
+  border-radius: 8px; /* Rounded corners for input */
+  padding: 0.75rem;
+  font-size: 1rem;
+  transition: border-color 0.2s; /* Smooth transition for border color */
+
+  &:focus {
+    border-color: #007bff; /* Highlight color when input is focused */
+    outline: none; /* Remove default focus outline */
+  }
+}
+
+button {
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px; /* Rounded corners for buttons */
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s; /* Smooth transitions for buttons */
+}
+
+button[type="submit"] {
+  background-color: var(--primary-color); /* Primary color for add button */
+  color: #ffffff; /* White text for add button */
+
+  &:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+}
+
+button[type="button"] {
+  background-color: #ff4757; /* Alert color for clear button */
+  color: #ffffff; /* White text for clear button */
+
+  &:hover {
+    background-color: #e84118; /* Darker shade on hover */
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+li {
+  background-color: #f9f9f9; /* Very light grey background for list items */
+  border-bottom: 1px solid #e2e2e2; /* Subtle border between items */
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #e9ecef; /* Slightly darker background on hover */
+  }
+}
+
+.remove-button {
+  background-color: transparent;
+  border: none;
+  color: #ff4757; /* Alert color for remove button */
+  cursor: pointer;
+
+  &:hover {
+    color: #e84118; /* Darker shade on hover */
+  }
+}
+
+/* Include any other classes you have and style them similarly */

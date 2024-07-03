@@ -1,0 +1,36 @@
+.footer {
+    background-color: #0f0f0f;
+    margin-top: 10%;
+    color: #fff;
+    padding-block: 3em;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 1em;
+    position: inherit;
+
+    .footer-section {
+        p {
+            opacity: .9;
+            margin-bottom: .5em;
+        }
+
+        p.title {
+            opacity: 1;
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 1em;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        padding-block: 1.5em;
+        text-align: center;
+        
+        .footer-section {
+            &:not(:first-child) {
+                margin-top: 1em;
+            }
+        }
+    }
+}

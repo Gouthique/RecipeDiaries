@@ -1,0 +1,114 @@
+$body-background-image: url("https://images.unsplash.com/photo-1579280921028-21d4e5005a77?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+.recipe-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  // background: #fafafa; // Neutral background that is easy on the eyes
+  position: relative; // Needed for absolute positioning of the background
+
+  // Background properties should be set here if you want it for the entire page
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: -100px;
+    margin-left: -800px;
+    min-height: 140vh;
+    max-height: auto;
+    width: 110vw;
+    background-image: $body-background-image; // Assuming variable is defined as above
+    background-size: cover;
+    background-position: center;
+    z-index: -1; // Ensures the background is behind everything else
+    opacity: 0.4; // Optional: reduces the intensity of the image for better readability
+  }
+
+  .recipe-container {
+    width: 100%;
+    min-height: 90vh;
+    max-height: auto;
+    margin-left: 70px;
+    max-width: 1500px;
+    background: rgba(255, 255, 255, 0.9); // Semi-transparent background for better content readability
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    padding: 20px;
+    position: relative; // Required for z-index to work
+    z-index: 1; // Ensures content is above the background
+
+    .recipe-header {
+      background-color: #E1F5FE;
+      padding: 20px 30px;
+      border-bottom: 2px solid #B3E5FC;
+
+      h1 {
+        font-size: 2.5rem;
+        color: #333;
+        font-family: 'Merriweather', serif;
+      }
+
+      .recipe-meta {
+        font-size: 1rem;
+        color: #607D8B;
+        font-family: 'Open Sans', sans-serif;
+        margin-top: 5px;
+        display: flex;
+        flex-wrap: wrap;
+
+        span {
+          margin-right: 20px;
+
+          &::after {
+            content: "|";
+            margin-left: 20px;
+            color: #B0BEC5;
+          }
+          &:last-child::after {
+            content: none;
+          }
+        }
+      }
+    }
+
+    .recipe-content {
+      display: flex;
+      justify-content: space-between;
+      padding: 30px;
+
+      .ingredients,
+      .directions {
+        flex: 1;
+        margin: 0 15px;
+
+        h2 {
+          color: var(--primary-color);
+          border-bottom: 1px solid #81D4FA;
+          padding-bottom: 10px;
+        }
+
+        ul, ol {
+          padding-left: 20px;
+          list-style-type: none;
+
+          li {
+            margin-bottom: 10px;
+            padding-left: 10px;
+            position: relative;
+            line-height: 1.4;
+
+            &:before {
+              content: "•";
+              color: var(--primary-color);
+              position: absolute;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
